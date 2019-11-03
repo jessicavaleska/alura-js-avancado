@@ -57,6 +57,15 @@
     <tfoot>
     </tfoot>
   </table>
-  <script src="js/index.js"></script>
+  <script src="js/app/models/Negociacao.js"></script>
+  <script>
+    /* estancias - objetos criados a partir da classe Negociacao */
+    // o operador new que torna o this correspondente ao objeto criado
+    var n1 = new Negociacao(new Date(), 5, 700);
+    var volume = n1.obtemVolume();
+    console.log(n1);
+    console.log(volume);
+    
+  </script>
 </body>
 </html>
