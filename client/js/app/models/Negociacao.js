@@ -1,12 +1,26 @@
 class Negociacao {
   // onde se define os atributos de uma classe
   constructor(data, quantidade, valor) {
-    this.data = data;
-    this.quantidade = quantidade;
-    this.valor = valor;
+    // o _ é uma convenção dizendo que as propiedades só podem ser acessadas pela própria classe
+    this._data = data;
+    this._quantidade = quantidade;
+    this._valor = valor;
   }
 
-  obtemVolume() {
-    return this.quantidade * this.valor;
+  // métodos acessadores
+  getData() {
+    return this._data;
+  }
+
+  getQuantidade() {
+    return this._quantidade;
+  }
+
+  getValor() {
+    return this._valor;
+  }
+
+  getVolume() {
+    return this._quantidade * this._valor;
   }
 }
