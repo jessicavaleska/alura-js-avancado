@@ -2,7 +2,7 @@ class Negociacao {
   // onde se define os atributos de uma classe
   constructor(data, quantidade, valor) {
     // o _ é uma convenção dizendo que as propiedades só podem ser acessadas pela própria classe
-    this._data = data;
+    this._data = new Date(data.getTime());
     this._quantidade = quantidade;
     this._valor = valor;
 
@@ -13,7 +13,9 @@ class Negociacao {
 
   // métodos acessadores
   get data() {
-    return this._data;
+    // cria uma nova data baseada na data da negociação
+    // por ser outro objeto, a alteração acontece na cópia e não na propiedade original
+    return new Date(this._data.getDate());
   }
 
   get quantidade() {

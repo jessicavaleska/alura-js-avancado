@@ -63,9 +63,11 @@
     // o operador new que torna o this correspondente ao objeto criado
     var n1 = new Negociacao(new Date(), 5, 700);
 
+    var hoje = new Date();
+
     console.log(n1.data);
 
-    n1.data.setDate(11);
+    hoje.setDate(11);
 
     console.log(n1.data);
 
