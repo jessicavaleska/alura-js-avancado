@@ -5,6 +5,10 @@ class Negociacao {
     this._data = data;
     this._quantidade = quantidade;
     this._valor = valor;
+
+    // this é uma variável implícita para quando um método ou construtor for chamado ter acesso a instância trabalhada
+    // Object.freeze é razo por isso mesmo congelando as propriedades do objeto, os métodos podem ser alterados 
+    Object.freeze(this);
   }
 
   // métodos acessadores

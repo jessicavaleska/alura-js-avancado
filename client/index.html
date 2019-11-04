@@ -63,13 +63,11 @@
     // o operador new que torna o this correspondente ao objeto criado
     var n1 = new Negociacao(new Date(), 5, 700);
 
-    console.log(Object.isFrozen(n1));
-    
-    // solução procedural, pois você que terá que congelar todas as intâncias
-    Object.freeze(n1);
-    n1._quantidade = 100000;
+    console.log(n1.data);
 
-    console.log(Object.isFrozen(n1));
+    n1.data.setDate(11);
+
+    console.log(n1.data);
 
     console.log(n1.data);
     console.log(n1.quantidade);
