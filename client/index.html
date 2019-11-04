@@ -62,6 +62,15 @@
     /* estancias - objetos criados a partir da classe Negociacao */
     // o operador new que torna o this correspondente ao objeto criado
     var n1 = new Negociacao(new Date(), 5, 700);
+
+    console.log(Object.isFrozen(n1));
+    
+    // solução procedural, pois você que terá que congelar todas as intâncias
+    Object.freeze(n1);
+    n1._quantidade = 100000;
+
+    console.log(Object.isFrozen(n1));
+
     console.log(n1.data);
     console.log(n1.quantidade);
     console.log(n1.valor);
